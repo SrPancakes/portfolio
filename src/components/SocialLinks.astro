@@ -1,0 +1,28 @@
+---
+import GitHubIcon from './icons/GitHubIcon.astro'
+import MediumIcon from './icons/MediumIcon.astro'
+import YouTubeIcon from './icons/YouTubeIcon.astro'
+import XIcon from './icons/XIcon.astro'
+import LinkedInIcon from './icons/LinkedInIcon.astro'
+
+import {socials} from '../data/socials.json'
+---
+
+<div class="grid grid-cols-5 gap-8">
+  {
+    socials.map(
+      button => (
+        <a
+          href={button.url}
+          target="_blank"
+          class='flex justify-center items-center size-12 text-gray-400 hover:text-white'
+        >
+          {button.icon === 'GitHubIcon' && <GitHubIcon class='size-10' />}
+          {button.icon === 'MediumIcon' && <MediumIcon />}
+          {button.icon === 'YouTubeIcon' && <YouTubeIcon />}
+          {button.icon === 'LinkedInIcon' && <LinkedInIcon class='size-10' />}
+          {button.icon === 'XIcon' && <XIcon class='size-8' />}
+      </a>
+    )
+  )}
+</div>

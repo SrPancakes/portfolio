@@ -1,0 +1,29 @@
+{
+  "socials": [
+    {
+      "name": "GitHub",
+      "url": "https://github.com/SrPancakes",
+      "icon": "GitHubIcon"
+    },
+    {
+      "name": "Medium",
+      "url": "https://medium.com/@SrPancakes",
+      "icon": "MediumIcon"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/@SrPancakes",
+      "icon": "YouTubeIcon"
+    },
+    {
+      "name": "GitHub",
+      "url": "https://twitter.com/SrPancakesDev",
+      "icon": "XIcon"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://www.linkedin.com/in/lucasnunezg-dev",
+      "icon": "LinkedInIcon"
+    }
+  ]
+}
