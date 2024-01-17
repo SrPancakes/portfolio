@@ -1,0 +1,27 @@
+---
+interface Props {
+  text: string;
+  href: string;
+}
+const { text, href } = Astro.props
+---
+
+<a 
+  class=" p-0.5 mb-2 me-2  
+    text-sm font-medium rounded-lg 
+    group bg-gradient-to-br from-green-400 to-blue-600 
+    group-hover:from-green-400 group-hover:to-blue-600 
+    hover:text-white dark:text-white focus:ring-4 focus:outline-none 
+    focus:ring-green-200 dark:focus:ring-green-800
+    flex flex-row justify-center items-center"
+  href={href}
+>
+  <span 
+    class="flex flex-row justify-center items-center gap-2
+      px-5 py-2.5 transition-all ease-in duration-75 
+      bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
+  >
+    {text}
+    <slot />
+  </span>
+</a>

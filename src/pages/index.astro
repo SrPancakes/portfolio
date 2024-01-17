@@ -1,6 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro'
+
 import SocialLinks from '../components/SocialLinks.astro'
+import Btn from '../components/Btn.astro'
+import BtnDeactivated from '../components/BtnDeactivated.astro'
+
+import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro'
+import DownloadIcon from '../components/icons/DownloadIcon.astro'
 ---
 
 <Layout title="Full Stack Developer.">
@@ -23,6 +29,25 @@ import SocialLinks from '../components/SocialLinks.astro'
         </h2>
       </div>
       <SocialLinks />
+      <div class="flex flex-row justify-center items-center gap-10">
+        <Btn
+          href='/contact/'
+          text='CONTACT'
+        >
+          <EnvelopeIcon 
+            class="size-6"
+          /> 
+        </Btn>
+        <span>OR</span>
+        <BtnDeactivated
+          href=''
+          text='DOWNLOAD CV'
+        >
+          <DownloadIcon 
+            class="size-6"
+          />
+        </Btn>
+      </div>
     </header>
 	</main>
 </Layout>
