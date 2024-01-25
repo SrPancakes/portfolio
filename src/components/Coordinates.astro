@@ -2,4 +2,20 @@
 import * as Profile from '../data/profile.json'
 ---
 
-<p class="text-white">{Profile.firstName}</p>
+<p
+  class="flex flex-row gap-2 text-base py-4 tracking-widest text-gray-500"
+  title="Location"
+>
+  {Profile.location.coordinates.tags.join(', ')}
+  <span class="font-bold">·</span>
+  {
+    Profile.location.coordinates.latitude < 0 
+      ? Profile.location.coordinates.latitude * -1 + '°S' 
+      : Profile.location.coordinates.latitude + '°N'
+  }
+  {
+    Profile.location.coordinates.longitude < 0 
+      ? Profile.location.coordinates.longitude * -1 + '°W' 
+      : Profile.location.coordinates.longitude + '°E'
+  }
+</p>
