@@ -1,13 +1,13 @@
 ---
+import * as Profile from '../data/profile.json'
+
 import Layout from '../layouts/Layout.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 
 import Badge from '../components/Badge.astro'
 import SocialLinks from '../components/SocialLinks.astro'
 import Btn from '../components/Btn.astro'
-
-import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro'
-import DownloadIcon from '../components/icons/DownloadIcon.astro'
+import Coordinates from '../components/Coordinates.astro'
 ---
 
 <Layout 
@@ -25,13 +25,15 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
         class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
       >
         Hey, I'm <span class="text-blue-500">
-          Lucas
+        {Profile.firstName}
         </span> <a
           href="https://linkedin.com/in/lucasnunezg-dev"
           target="_blank"
           rel="noopener"
           class="flex items-center hover:scale-105 transition"
-        > <Badge>Available for hire</Badge> </a>
+        > <Badge>
+            {Profile.availableForHire ? 'Available for hire' : 'Not available for hire'}
+          </Badge> </a>
       </h1>
       <h2
         class="mb-6 text-xl text-center lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
@@ -39,7 +41,7 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
         <span
           class="text-yellow-800 dark:text-yellow-200"
         >
-          Full Stack Developer 
+          {Profile.jobTitle} 
         </span>
         specialized in creating
         <span
@@ -71,6 +73,7 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
           alternative
         />
       </div>
+      <Coordinates />
     </SectionContainer>
 	</main>
 </Layout>

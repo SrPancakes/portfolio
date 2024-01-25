@@ -1,0 +1,15 @@
+{
+  "firstName": "Lucas",
+  "lastName": "Núñez",
+  "jobTitle": "Full Stack Developer",
+  "availableForHire": true,
+  "location": {
+    "city": "La Coruña",
+    "country": "Spain",
+    "coordinates": {
+      "tags": ["LGC", "ES"],
+      "latitude": 43.362,
+      "longitude": -8.411
+    }
+  }
+}
