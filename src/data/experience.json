@@ -1,0 +1,16 @@
+[
+  {
+    "date": "Current...",
+    "title": "Full Stack Developer",
+    "description": "Developed a full stack application for a local scuba diving business: ",
+    "company": "Nauga Diving.",
+    "link": "https://naugabuceo.com/"
+  },
+  {
+    "date": "Summer 2022",
+    "title": "Front End Developer In Training",
+    "description": "Developer in training for a software company based in Vigo, Spain: ",
+    "company": "Possible Inc.",
+    "link": "https://www.possibleinc.com/"
+  }
+]

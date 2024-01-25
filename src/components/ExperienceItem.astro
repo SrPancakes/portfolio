@@ -1,0 +1,57 @@
+---
+import LinkButton from "./LinkButton.astro"
+
+interface Props {
+  title: string
+  description: string
+  company?: string
+  link?: string
+  date: string
+}
+
+const { title, description, company, link, date } = Astro.props
+---
+<span 
+  class:list={[
+    {
+      "absolute flex items-center justify-center size-6 bg-blue-100 rounded-full -start-3 ring-8 ring-white dark:ring-gray-900 dark:bg-blue-900": date == "Current...",
+      "absolute size-5 rounded-full mt-1.5 -start-2.5 border border-gray-900 bg-gray-700": date != "Current...",
+    }
+  ]}
+/>
+<h3 
+  class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white"
+>
+  {title}
+  <span 
+    class:list={[
+      {
+        "bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3": date == "Current...",
+        "hidden": date != "Current..."
+      }
+    ]}
+  >
+    {date}
+  </span>
+</h3>
+<time 
+  class="block mb-2 text-sm font-normal leading-none text-gray-400 dark:text-gray-500"
+>
+  { date == "Current..." ? "Current position" : date }
+</time>
+<p 
+  class="mb-4 text-base font-normal text-gray-500 dark:text-gray-400"
+>
+  { description }
+  <a 
+    href={link} 
+    class:list={[
+      {
+        "text-blue-600 dark:text-blue-400": link,
+        "hidden": !link
+      }
+    ]}
+  >
+    { link ? company : "" }
+  </a>
+</p>

@@ -3,6 +3,7 @@ import * as Profile from '../data/profile.json'
 
 import Layout from '../layouts/Layout.astro'
 import SectionContainer from '../components/SectionContainer.astro'
+import Experience from '../components/Experience.astro'
 
 import Badge from '../components/Badge.astro'
 import SocialLinks from '../components/SocialLinks.astro'
@@ -11,11 +12,14 @@ import Coordinates from '../components/Coordinates.astro'
 ---
 
 <Layout 
-  title="Full Stack Developer."
+  title="Lucas Núñez."
   description='Hire me to create your next website or application. Full Stack Developer specialized in creating stylish and unique applications.'
 >
 	<main class="px-4">
-    <SectionContainer class='flex flex-col items-center py-32 pb-33'>
+    <SectionContainer 
+      id='hero'
+      class='flex flex-col items-center py-24 pb-33'
+    >
       <img
         class='size-96 mb-4'
         src='/ProfIcon.webp'
@@ -74,6 +78,11 @@ import Coordinates from '../components/Coordinates.astro'
         />
       </div>
       <Coordinates />
+    </SectionContainer>
+    <SectionContainer
+      id='experience'
+    >
+      <Experience />
     </SectionContainer>
 	</main>
 </Layout>
