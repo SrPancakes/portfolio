@@ -5,7 +5,6 @@ import SectionContainer from '../components/SectionContainer.astro'
 import Badge from '../components/Badge.astro'
 import SocialLinks from '../components/SocialLinks.astro'
 import Btn from '../components/Btn.astro'
-import BtnDeactivated from '../components/BtnDeactivated.astro'
 
 import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro'
 import DownloadIcon from '../components/icons/DownloadIcon.astro'
@@ -57,8 +56,21 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
       </h2>
       <SocialLinks />
       <div
-        class=""
+        class="ml-7 mt-10 flex flex-row justify-space-between items-center gap-x-4"
       >
+        <Btn
+          text='Contact Me'
+          href=''
+        />
+        <span class="mr-2">
+          OR
+        </span>
+        <Btn
+          text='Download CV'
+          href=''
+          alternative
+        />
+      </div>
     </SectionContainer>
 	</main>
 </Layout>
