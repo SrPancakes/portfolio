@@ -10,45 +10,22 @@ import EnvelopeIcon from '../components/icons/EnvelopeIcon.astro'
 import DownloadIcon from '../components/icons/DownloadIcon.astro'
 ---
 
-<Layout title="Full Stack Developer.">
-	<main>
-    <header class="flex flex-col justify-center items-center">
-      <div class="text-center">
-        <span>00:00</span>
-        <img
-          class='rounded-full size-56'
-         src='profile_picture.png' 
-          alt='Profile picture' 
-        />
-        <h1>Lucas Núñez</h1>
-        <h2>Current position</h2>
-        <h2 class="flex justify-center items-center gap-2.5 uppercase">
-          <span
-            class="size-3 bg-green-400 border-2 rounded-full 
-            shadow-[0_0_2px_#fff,inset_0_0_2px_#fff,0_0_5px_#00FF00,0_0_15px_#00FF00,0_0_30px_#00FF00]"
-          /> Available to hire
-        </h2>
-      </div>
-      <SocialLinks />
-      <div class="flex flex-row justify-center items-center gap-10">
-        <Btn
-          href='/contact/'
-          text='CONTACT'
-        >
-          <EnvelopeIcon 
-            class="size-6"
-          /> 
-        </Btn>
-        <span>OR</span>
-        <BtnDeactivated
-          href=''
-          text='DOWNLOAD CV'
-        >
-          <DownloadIcon 
-            class="size-6"
-          />
-        </Btn>
-      </div>
-    </header>
+<Layout 
+  title="Full Stack Developer."
+  description='Hire me to create your next website or application. Full Stack Developer specialized in creating stylish and unique applications.'
+>
+	<main class="px-4">
+    <SectionContainer class='py-44 pb-33'>
+      <img
+        class='size-96 mb-4'
+        src='/ProfIcon.webp'
+        alt='Profile Picture'
+      />
+      <h1
+        class="text-gray-900 dark:text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10"
+      >
+        Hey, I'm <span class="text-blue-500">Lucas</span>
+      </h1>
+    </SectionContainer>
 	</main>
 </Layout>
