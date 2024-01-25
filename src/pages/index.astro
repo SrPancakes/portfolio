@@ -16,7 +16,7 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
   description='Hire me to create your next website or application. Full Stack Developer specialized in creating stylish and unique applications.'
 >
 	<main class="px-4">
-    <SectionContainer class='py-44 pb-33'>
+    <SectionContainer class='flex flex-col items-center py-44 pb-33'>
       <img
         class='size-96 mb-4'
         src='/ProfIcon.webp'
@@ -31,9 +31,31 @@ import DownloadIcon from '../components/icons/DownloadIcon.astro'
           href="https://linkedin.com/in/lucasnunezg-dev"
           target="_blank"
           rel="noopener"
-          class="flex justify-center items-center hover:scale-105 transition"
+          class="flex items-center hover:scale-105 transition"
         > <Badge>Available for hire</Badge> </a>
       </h1>
+      <h2
+        class="text-xl text-center lg:text-2xl text-balance max-w-[700px] text-black dark:text-white"
+      >
+        <span
+          class="text-yellow-800 dark:text-yellow-200"
+        >
+          Full Stack Developer 
+        </span>
+        specialized in creating
+        <span
+            class="text-red-800 dark:text-red-200"
+        >
+          stylish and unique applications.
+        </span>
+        Passionate about solving problems and building solutions that involve
+        <span
+          class="text-sky-800 dark:text-sky-200"
+        >
+          creativity and innovation.
+        </span>
+      </h2>
+      <SocialLinks class='mt-40' />
     </SectionContainer>
 	</main>
 </Layout>
