@@ -1,7 +1,19 @@
 ---
+import Layout from '../layouts/Layout.astro'
 
+import SectionContainer from '../components/SectionContainer.astro'
+import FrontendStack from '../components/FrontendStack.astro'
 ---
 
-<p>
-  Hello World!
-</p>
+<Layout 
+  title="Stack"
+  description='List of all the technologies I use'
+>
+  <main class="px-4">
+    <SectionContainer
+      id="stack"
+    >
+      <FrontendStack />
+    </SectionContainer>
+  </main>
+</Layout>
