@@ -9,11 +9,9 @@ interface Props {
   link: string;
   github?: string;
   tags: any[];
-  color: string;
-  textColor: string;
 }
 
-const { title, description, image, link, github, tags, color, textColor } = Astro.props
+const { title, description, image, link, github, tags } = Astro.props
 ---
 
 <article class="flex items-center flex-col xl:flex-row gap-x-20">
@@ -27,7 +25,7 @@ const { title, description, image, link, github, tags, color, textColor } = Astr
     <ul class="flex gap-x-2 flex-row mb-2">
       {tags.map((tag) => (
         <li>
-          <span class={`flex gap-x-2 rounded-full text-xs text-[${textColor}] bg-[${color}] py-1 px-2`}>
+          <span class={`flex gap-x-2 rounded-full text-xs text-[${tag.textColor}] bg-[${tag.color}] py-1 px-2`}>
             <tag.icon class='size-4' />
             {tag.name}
           </span>
