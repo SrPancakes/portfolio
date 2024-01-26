@@ -6,16 +6,32 @@ import StackIcon from './icons/StackIcon.astro'
 import ProfileIcon from './icons/ProfileIcon.astro'
 import EnvelopeIcon from './icons/EnvelopeIcon.astro'
 import SearchIcon from './icons/SearchIcon.astro'
+
+const pathname = new URL(Astro.request.url).pathname
 ---
 
-<aside class="ml-2 flex flex-col text-gray-600 fixed h-[100vh] justify-center gap-10">
-  <HomeIcon class='menu-icon size-8' />
-  <ProjectsIcon class='menu-icon size-8' />
-  <PagesIcon class='menu-icon size-8' />
-  <StackIcon class='menu-icon size-8' />
-  <ProfileIcon class='menu-icon size-8' />
-  <EnvelopeIcon class='menu-icon size-8' />
-  <SearchIcon class='menu-icon size-8' />
+<aside class="flex flex-row xl:flex-col text-gray-600 fixed xl:h-[100vh] xl:w-fit w-screen justify-center bottom-0 py-3 backdrop-blur gap-10">
+  <a href="/" class=`menu-icon size-8 ${pathname === '/' ? 'text-white' : ''}`>
+    <HomeIcon />
+  </a>
+  <a href="/projects" class=`menu-icon size-8 ${pathname === '/projects' ? 'text-white' : ''}`>
+    <ProjectsIcon />
+  </a>
+  <a href="/pages" class=`menu-icon size-8 ${pathname === '/pages' ? 'text-white' : ''}`>
+    <PagesIcon />
+  </a>
+  <a href="/stack" class=`menu-icon size-8 ${pathname === '/stack' ? 'text-white' : ''}`>
+    <StackIcon />
+  </a>
+  <a href="/profile" class=`menu-icon size-8 ${pathname === '/profile' ? 'text-white' : ''}`>
+    <ProfileIcon />
+  </a>
+  <a href="/contact" class=`menu-icon size-8 ${pathname === '/contact' ? 'text-white' : ''}`>
+    <EnvelopeIcon />
+  </a>
+  <a href="/search" class=`menu-icon size-8 ${pathname === '/search' ? 'text-white' : ''}`>
+    <SearchIcon />
+  </a>
 </aside>
 
 <style>
@@ -24,4 +40,3 @@ import SearchIcon from './icons/SearchIcon.astro'
     cursor: pointer;
   }
 </style>
-

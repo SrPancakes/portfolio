@@ -1,0 +1,47 @@
+---
+import ARTICLES from '../data/articles.json'
+
+const isNew = (date: string) => {
+  const today = new Date()
+  const articleDate = new Date(date)
+  const diffTime = Math.abs(today.getTime() - articleDate.getTime())
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
+  return diffDays <= 7
+}
+---
+
+<ul>
+  {
+    ARTICLES.slice(0, 3).map((article) => (
+      <li class="flex flex-col gap-4 py-14">
+        <a
+          class="flex flex-row hover:cursor-pointer hover:text-gray-700 dark:hover:text-gray-300"
+          target="_blank"
+          href={article.link}>
+          <h2 class="text-lg text-wrap">
+            {article.title}
+            <span 
+              class:list={[
+                {
+                  "bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3": isNew(article.date),
+                  "hidden": !isNew(article.date)
+                }
+              ]}
+            >
+              New
+            </span>
+          </h2>
+          <span class="text-right min-w-28 ml-auto text-gray-400 dark:text-gray-500">
+            {article.date}
+          </span>
+        </a>
+        <a
+          href={article.link}
+          class="text-sm uppercase text-gray-500 dark:text-gray-400 hover:cursor-pointer
+          hover:text-gray-400 dark:hover:text-gray-500">
+          {article.topic}
+        </span>
+      </li>
+    ))
+  }
+</ul>

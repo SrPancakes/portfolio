@@ -24,9 +24,9 @@ const PROJECTS = [
 ]
 ---
 
-<div class="flex flex-col gap-y-36 justify-center items-center w-[150%] -mx-40 [&>*:nth-child(odd)]:flex-row-reverse">
+<div class="flex flex-col gap-y-36 justify-center items-center xl:w-[150%] xl:-mx-40 xl:[&>*:nth-child(odd)]:flex-row-reverse">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.slice(0,3).map(({ image, title, description, tags, link, github }) => (
       <ProjectItem
         image={image}
         title={title}
