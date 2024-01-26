@@ -4,6 +4,7 @@ import * as Profile from '../data/profile.json'
 import Layout from '../layouts/Layout.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro'
 
 import Badge from '../components/Badge.astro'
 import SocialLinks from '../components/SocialLinks.astro'
@@ -80,9 +81,16 @@ import Coordinates from '../components/Coordinates.astro'
       <Coordinates />
     </SectionContainer>
     <SectionContainer
+      title='Experience'
       id='experience'
     >
       <Experience />
+    </SectionContainer>
+    <SectionContainer
+      title='Projects'
+      id='projects'
+    >
+      <Projects />
     </SectionContainer>
 	</main>
 </Layout>

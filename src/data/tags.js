@@ -1,15 +1,14 @@
----
 import NextIcon from '../components/icons/NextIcon.astro'
 import TailwindIcon from '../components/icons/TailwindIcon.astro'
 import ReactIcon from '../components/icons/ReactIcon.astro'
-import TypeScriptIcon from '../components/icons/TypeScriptIcon.astro'
-import JavaScriptIcon from '../components/icons/JavaScriptIcon.astro'
+import TypescriptIcon from '../components/icons/TypescriptIcon.astro'
+import JavascriptIcon from '../components/icons/JavascriptIcon.astro'
 import NodeIcon from '../components/icons/NodeIcon.astro'
 import ExpressIcon from '../components/icons/ExpressIcon.astro'
 import MongoDBIcon from '../components/icons/MongoIcon.astro'
 import MySQLIcon from '../components/icons/MysqlIcon.astro'
 
-const TAGS = {
+export const TAGS = {
   NEXT: {
     name: "Next.js",
     color: "#000000",
@@ -32,13 +31,13 @@ const TAGS = {
     name: "TypeScript",
     color: "#007ACC",
     textColor: "#FFFFFF",
-    icon: TypeScriptIcon
+    icon: TypescriptIcon
   },
   JAVASCRIPT: {
     name: "JavaScript",
     color: "#F7DF1E",
     textColor: "#000000",
-    icon: JavaScriptIcon
+    icon: JavascriptIcon
   },
   NODE: {
     name: "Node.js",
@@ -65,4 +64,3 @@ const TAGS = {
     icon: MySQLIcon
   },
 }
----
