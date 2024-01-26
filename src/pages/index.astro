@@ -5,6 +5,7 @@ import Layout from '../layouts/Layout.astro'
 import SectionContainer from '../components/SectionContainer.astro'
 import Experience from '../components/Experience.astro'
 import Projects from '../components/Projects.astro'
+import AboutMe from '../components/AboutMe.astro'
 
 import Badge from '../components/Badge.astro'
 import SocialLinks from '../components/SocialLinks.astro'
@@ -91,6 +92,12 @@ import Coordinates from '../components/Coordinates.astro'
       id='projects'
     >
       <Projects />
+    </SectionContainer>
+    <SectionContainer
+      title='About me'
+      id='about'
+    >
+      <AboutMe />
     </SectionContainer>
 	</main>
 </Layout>
