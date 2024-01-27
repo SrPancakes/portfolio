@@ -44,6 +44,7 @@ import ClockIcon from '../components/icons/ClockIcon.astro'
 
           <button 
             type="button" 
+            onclick="navigator.clipboard.writeText('l.nunezg.dev@gmail.com')"
             class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
             focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
             items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
@@ -52,15 +53,16 @@ import ClockIcon from '../components/icons/ClockIcon.astro'
             Copy email
           </button>
 
-          <button 
-            type="button" 
+          <a 
+            href="https://twitter.com/SrPancakesDev"
+            target="_blank"
             class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
             focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
             items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
           >
             <PlaneIcon class="size-4 me-2" />
               DM me
-          </button>
+          </a>
         </div>
       </div>
 
@@ -68,7 +70,12 @@ import ClockIcon from '../components/icons/ClockIcon.astro'
         <span class="w-96 bg-white h-[1px]"></span>OR<span class="w-96 bg-white h-[1px]"></span>
       </p>
 
-      <form class="max-w-sm ">
+      <form 
+        method='POST'
+        id="form"
+        class="max-w-sm ">
+
+        <input type='hidden' name='access_key' value={import.meta.env.CONTACT_FORM_KEY} />
 
        <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
         <div class="relative">
@@ -79,24 +86,81 @@ import ClockIcon from '../components/icons/ClockIcon.astro'
             </svg>
           </div>
           <input 
-            type="text" 
-            id="email-address-icon" 
+            type="email" 
+            name="email"
+            required
             class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[48rem] ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
             placeholder="name@mail.com">
         </div>
 
         <label for="message" class="pt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-        <textarea id="message" rows="4" class="block p-2.5 w-[48rem] h-40 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+        <textarea 
+          name="message"
+          required
+          rows="4" 
+          class="block p-2.5 w-[48rem] h-40 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
 
-        <button 
-          type="submit" 
-          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium 
-          rounded-lg text-sm px-5 py-2.5 me-2 my-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none 
-          dark:focus:ring-blue-800">
-          Submit
-        </button>
+        <div class="flex flex-row w-[48rem] justify-between items-center">
+          <button 
+            type="submit" 
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium 
+            rounded-lg text-sm px-5 py-2.5 me-2 my-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none 
+            dark:focus:ring-blue-800">
+            Submit
+          </button>
+
+          <p class="flex flex-row items-center justify-center gap-1">
+            <ClockIcon class="size-4 me-2" />
+            Around 1-4 hours to respond
+          </p>
+        </div>
+
+        <div id="result" class="text-yellow-800/90 dark:text-yellow-200/90" ></div>
       </form>
 
     </SectionContainer>
   </main>
 </Layout>
+
+<script is:inline>
+  const form = document.getElementById('form');
+  const result = document.getElementById('result');
+
+  form.addEventListener('submit', function(e) {
+      const formData = new FormData(form);
+      e.preventDefault();
+
+      const object = Object.fromEntries(formData);
+      const json = JSON.stringify(object);
+
+      result.innerHTML = "Please wait..."
+
+      fetch('https://api.web3forms.com/submit', {
+              method: 'POST',
+              headers: {
+                  'Content-Type': 'application/json',
+                  'Accept': 'application/json'
+              },
+              body: json
+          })
+          .then(async (response) => {
+              let json = await response.json();
+              if (response.status == 200) {
+                  result.innerHTML = json.message;
+              } else {
+                  console.log(response);
+                  result.innerHTML = json.message;
+              }
+          })
+          .catch(error => {
+              console.log(error);
+              result.innerHTML = "Something went wrong!";
+          })
+          .then(function() {
+              form.reset();
+              setTimeout(() => {
+                  result.style.display = "none";
+              }, 3000);
+          });
+  });
+</script>
