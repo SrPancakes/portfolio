@@ -1,0 +1,70 @@
+---
+import SectionContainer from './SectionContainer.astro'
+import StackCard from './StackCard.astro'
+
+import GitIcon from './icons/GitIcon.astro'
+import CopilotIcon from './icons/CopilotIcon.astro'
+import WarpIcon from './icons/WarpIcon.astro'
+import NvimIcon from './icons/NvimIcon.astro'
+import ArcIcon from './icons/ArcIcon.astro'
+import InkdropIcon from './icons/InkdropIcon.astro'
+---
+
+<SectionContainer
+  title='Back End'
+  id='back-end'
+>
+  <article
+    class='flex flex-row flex-wrap items-center justify-between gap-y-12'
+  >
+
+    <StackCard
+      title='Git'
+      subtitle='Version Control'
+      link='https://git-scm.com/'
+    >
+      <GitIcon class='size-32' />
+    </StackCard>
+
+    <StackCard
+      title='GitHub Copilot'
+      subtitle='AI'
+      link='https://copilot.github.com/'
+    >
+      <CopilotIcon class='size-32' />
+    </StackCard>
+
+    <StackCard
+      title='Warp'
+      subtitle='Terminal'
+      link='https://warp.dev/'
+    >
+      <WarpIcon class='size-32 rounded-lg' />
+    </StackCard>
+
+    <StackCard
+      title='Neovim'
+      subtitle='Text Editor'
+      link='https://neovim.io/'
+    >
+      <NvimIcon class='size-32' />
+    </StackCard>
+
+    <StackCard
+      title='Arc'
+      subtitle='Web Browser'
+      link='https://arc.net/'
+    >
+      <ArcIcon class='size-32' />
+    </StackCard>
+
+    <StackCard
+      title='Inkdrop'
+      subtitle='Note Taking'
+      link='https://www.inkdrop.app/'
+    >
+      <InkdropIcon class='size-32' />
+    </StackCard>
+
+  </article>
+</SectionContainer>

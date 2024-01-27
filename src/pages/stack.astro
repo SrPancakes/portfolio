@@ -3,6 +3,9 @@ import Layout from '../layouts/Layout.astro'
 
 import SectionContainer from '../components/SectionContainer.astro'
 import FrontendStack from '../components/FrontendStack.astro'
+import BackendStack from '../components/BackendStack.astro'
+import FrameworkStack from '../components/FrameworkStack.astro'
+import MiscellaneousStack from '../components/MiscellaneousStack.astro'
 ---
 
 <Layout 
@@ -10,10 +13,17 @@ import FrontendStack from '../components/FrontendStack.astro'
   description='List of all the technologies I use'
 >
   <main class="px-4">
+    <h1 class='pt-32 pb-16 text-center text-4xl font-bold mb-8'>
+      My Tech Stack
+    </h1>
     <SectionContainer
       id="stack"
+      class='flex flex-col items-center py-24'
     >
       <FrontendStack />
+      <BackendStack />
+      <FrameworkStack />
+      <MiscellaneousStack />
     </SectionContainer>
   </main>
 </Layout>

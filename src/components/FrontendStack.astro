@@ -1,5 +1,60 @@
 ---
+import SectionContainer from './SectionContainer.astro'
 import StackCard from './StackCard.astro'
+
+import HtmlIcon from './icons/HtmlIcon.astro'
+import CssIcon from './icons/CssIcon.astro'
+import JsIcon from './icons/JavascriptIcon.astro'
+import TsIcon from './icons/TypescriptIcon.astro'
+import MarkdownIcon from './icons/MarkdownIcon.astro'
 ---
 
-<StackCard />
+<SectionContainer
+  title='Front End'
+  id='front-end'
+>
+  <article
+    class='flex flex-row flex-wrap items-center justify-center gap-10'
+  >
+    <StackCard 
+      title='HTML5'
+      subtitle='MarkUp'
+      link='https://developer.mozilla.org/es/docs/Web/HTML'
+    >
+      <HtmlIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='CSS3'
+      subtitle='Styling'
+      link='https://developer.mozilla.org/es/docs/Web/CSS'
+    >
+      <CssIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='JavaScript'
+      subtitle='Scripting'
+      link='https://developer.mozilla.org/es/docs/Web/JavaScript'
+    >
+      <JsIcon class='size-32 rounded-lg' />
+    </StackCard>
+
+    <StackCard 
+      title='TypeScript'
+      subtitle='Scripting'
+      link='https://www.typescriptlang.org/'
+    >
+      <TsIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='Markdown'
+      subtitle='MarkUp'
+      link='https://www.markdownguide.org/'
+    >
+      <MarkdownIcon class='size-32' />
+    </StackCard>
+
+  </article>
+</SectionContainer>

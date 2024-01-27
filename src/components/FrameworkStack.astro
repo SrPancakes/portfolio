@@ -1,0 +1,68 @@
+---
+import SectionContainer from './SectionContainer.astro'
+import StackCard from './StackCard.astro'
+
+import TailwindIcon from './icons/TailwindIcon.astro'
+import ReactIcon from './icons/ReactIcon.astro'
+import NextIcon from './icons/NextIcon.astro'
+import NodeIcon from './icons/NodeIcon.astro'
+import ExpressIcon from './icons/ExpressIcon.astro'
+import AstroIcon from './icons/AstroIcon.astro'
+---
+<SectionContainer
+  title='Frameworks'
+  id='frameworks'
+>
+  <article
+    class='flex flex-row flex-wrap items-center justify-between gap-y-12'
+  >
+    <StackCard 
+      title='TailwindCSS'
+      subtitle='CSS'
+      link='https://tailwindcss.com/docs'
+    >
+      <TailwindIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='ReactJS'
+      subtitle='JS/TS'
+      link='https://react.dev'
+    >
+      <ReactIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='NextJS'
+      subtitle='JS/TS'
+      link='https://nextjs.org/docs/getting-started'
+    >
+      <NextIcon class='size-32 rounded-full text-white bg-black' />
+    </StackCard>
+
+    <StackCard 
+      title='NodeJS'
+      subtitle='Runtime'
+      link='https://nodejs.org/en/docs/'
+    >
+      <NodeIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='Express'
+      subtitle='JS'
+      link='https://expressjs.com/en/4x/api.html'
+    >
+      <ExpressIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='Astro'
+      subtitle='Content Driven'
+      link='https://docs.astro.build/getting-started'
+    >
+      <AstroIcon class='size-32 rounded-lg' />
+    </StackCard>
+
+  </article>
+</SectionContainer>

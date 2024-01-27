@@ -1,0 +1,68 @@
+---
+import SectionContainer from './SectionContainer.astro'
+import StackCard from './StackCard.astro'
+
+import CIcon from './icons/CIcon.astro'
+import CppIcon from './icons/CppIcon.astro'
+import JavaIcon from './icons/JavaIcon.astro'
+import JsIcon from './icons/JavascriptIcon.astro'
+import TsIcon from './icons/TypescriptIcon.astro'
+import PythonIcon from './icons/PythonIcon.astro'
+---
+<SectionContainer
+  title='Back End'
+  id='back-end'
+>
+  <article
+    class='flex flex-row flex-wrap items-center justify-between gap-y-12'
+  >
+    <StackCard 
+      title='C'
+      subtitle='Low Level'
+      link='https://learn.microsoft.com/en-us/cpp/c-language/?view=msvc-170'
+    >
+      <CIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='C++'
+      subtitle='OO Low Level'
+      link='https://docs.microsoft.com/en-us/cpp/cpp/?view=msvc-170'
+    >
+      <CppIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='Java'
+      subtitle='OO High Level'
+      link='https://docs.oracle.com/en/java'
+    >
+      <JavaIcon class='size-32 rounded-lg' />
+    </StackCard>
+
+    <StackCard 
+      title='JavaScript'
+      subtitle='Scripting'
+      link='https://developer.mozilla.org/es/docs/Web/JavaScript'
+    >
+      <JsIcon class='size-32 rounded-lg' />
+    </StackCard>
+
+    <StackCard 
+      title='TypeScript'
+      subtitle='Scripting'
+      link='https://developer.mozilla.org/es/docs/Web/TypeScript'
+    >
+      <TsIcon class='size-32' />
+    </StackCard>
+
+    <StackCard 
+      title='Python'
+      subtitle='Scripting'
+      link='https://docs.python.org/3/'
+    >
+      <PythonIcon class='size-32' />
+    </StackCard>
+
+  </article>
+</SectionContainer>
