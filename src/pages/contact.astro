@@ -1,6 +1,14 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Lauout from '../layouts/Layout.astro'
+import SectionContainer from '../components/SectionContainer.astro'
+
+import Badge from '../components/Badge.astro'
+import Profile from '../data/profile.json'
+
+import CalendarIcon from '../components/icons/CalendarIcon.astro'
+import CopyIcon from '../components/icons/CopyIcon.astro'
+import PlaneIcon from '../components/icons/PlaneIcon.astro'
+import ClockIcon from '../components/icons/ClockIcon.astro'
 ---
 
 <Layout
@@ -12,25 +20,83 @@ import Lauout from '../layouts/Layout.astro'
       Get in <span class="text-blue-500">Touch</span>
     </h1>
 
-    <form class="max-w-sm mx-auto">
+    <SectionContainer>
+      <div class="relative flex flex-col mb-8 gap-4">
+        <a
+          href="https://linkedin.com/in/lucasnunezg-dev"
+          target="_blank"
+          rel="noopener"
+          class="absolute flex items-center hover:scale-105 transition"
+        > <Badge>
+            {Profile.availableForHire ? 'Available for hire' : 'Not available for hire'}
+          </Badge> </a>
 
-     <label for="email-address-icon" class="-ml-20 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
-      <div class="relative">
-        <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
-          <svg class="size-4 -ml-24 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
-            <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
-            <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
-          </svg>
+        <div class="mt-14 flex gap-2">
+          <button 
+            type="button" 
+            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
+            focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
+            inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+          >
+            <CalendarIcon class="size-4 me-2" />
+            Book a call
+          </button>
+
+          <button 
+            type="button" 
+            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
+            focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
+            items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+          >
+            <CopyIcon class="size-4 me-2" />
+            Copy email
+          </button>
+
+          <button 
+            type="button" 
+            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
+            focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
+            items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+          >
+            <PlaneIcon class="size-4 me-2" />
+              DM me
+          </button>
         </div>
-        <input 
-          type="text" 
-          id="email-address-icon" 
-          class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block -ml-24 w-[150%] ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
-          placeholder="name@mail.com">
       </div>
 
-      <label for="message" class="pt-10 -ml-20 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
-      <textarea id="message" rows="4" class="-ml-24 block p-2.5 w-[150%] h-40 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
-    </form>
+      <p class="ml-6 py-6 flex flex-row items-center justify-center gap-10">
+        <span class="w-96 bg-white h-[1px]"></span>OR<span class="w-96 bg-white h-[1px]"></span>
+      </p>
+
+      <form class="max-w-sm ">
+
+       <label for="email-address-icon" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Email</label>
+        <div class="relative">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3.5 pointer-events-none">
+            <svg class="size-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 16">
+              <path d="m10.036 8.278 9.258-7.79A1.979 1.979 0 0 0 18 0H2A1.987 1.987 0 0 0 .641.541l9.395 7.737Z"/>
+              <path d="M11.241 9.817c-.36.275-.801.425-1.255.427-.428 0-.845-.138-1.187-.395L0 2.6V14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V2.5l-8.759 7.317Z"/>
+            </svg>
+          </div>
+          <input 
+            type="text" 
+            id="email-address-icon" 
+            class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-[48rem] ps-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" 
+            placeholder="name@mail.com">
+        </div>
+
+        <label for="message" class="pt-10 block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your message</label>
+        <textarea id="message" rows="4" class="block p-2.5 w-[48rem] h-40 text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Leave a comment..."></textarea>
+
+        <button 
+          type="submit" 
+          class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium 
+          rounded-lg text-sm px-5 py-2.5 me-2 my-2.5 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none 
+          dark:focus:ring-blue-800">
+          Submit
+        </button>
+      </form>
+
+    </SectionContainer>
   </main>
 </Layout>
