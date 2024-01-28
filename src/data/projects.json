@@ -5,13 +5,23 @@
     "link": "https://svgl.vercel.app/",
     "github": "https://github.com/pheralb/svgl",
     "image": "/projects/svgl.webp",
-    "tags": ["Next.js", "React", "Tailwind CSS"]
+    "tags": ["Next.js", "React", "Tailwind CSS"],
+    "client": "Some client",
+    "clientLink": "https://someclient.com",
+    "time": "2 months",
+    "role": "Frontend Developer",
+    "outcome": "A beautiful library with SVG logos",
+    "summary": "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS."
   },
   {
     "title": "AdventJS - Retos de programación con JavaScript y TypeScript",
     "description": "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS",
     "link": "https://adventjs.dev",
     "image": "/projects/adventjs.webp",
-    "tags": ["Next.js", "Tailwind CSS"]
+    "tags": ["Next.js", "Tailwind CSS"],
+    "time": "2 months",
+    "role": "Frontend Developer",
+    "outcome": "A beautiful library with SVG logos",
+    "summary": "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS"
   }
 ]
