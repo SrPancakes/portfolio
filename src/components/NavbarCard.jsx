@@ -1,10 +1,4 @@
-interface Props {
-  title: string
-  description: string
-  onclick?: any
-}
-
-export default function NavbarCard({ title, description, onclick }: Props) {
+export default function NavbarCard(props) {
 
   return (
     <a
@@ -14,12 +8,12 @@ export default function NavbarCard({ title, description, onclick }: Props) {
       <h5 
           className="mb-2 text-lg font-bold tracking-tight text-gray-900 dark:text-white"
       >
-        {title}
+        {props.title}
       </h5>
       <p 
         className="font-normal text-gray-700 dark:text-gray-400"
       >
-        {description}
+        {props.description}
       </p>
     </a>
   )
