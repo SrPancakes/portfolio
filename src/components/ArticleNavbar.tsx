@@ -28,12 +28,13 @@ export default function Navbar() {
           {ARTICLES.map((project: any) => {
             if (project.title === currentArticle.title) return null;
             return (
-              <NavbarCard
-                key={project.title}
-                onclick={() => handleClick(project)}
-                title={project.title}
-                description={project.description}
-              />
+              <div key={project.title}>
+                <NavbarCard
+                  onclick={() => handleClick(project)}
+                  title={project.title}
+                  description={project.description}
+                />
+              </div>
             );
           })}
         </ul>
