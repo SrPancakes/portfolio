@@ -6,7 +6,7 @@ import { useProjectStore } from "./store/projectStore";
 export default function Navbar() {
   const { currentArticle, setCurrentArticle } = useProjectStore(state => state)
 
-  const handleClick = (project: (typeof ARTICLES[0])) => {
+  const handleClick = (project) => {
     setCurrentArticle(project);
     console.log(currentArticle);
   };
@@ -25,7 +25,7 @@ export default function Navbar() {
           UP NEXT
         </h2>
         <ul className="scrollbar-hide max-h-[48.5vh] overflow-y-scroll py-6">
-          {ARTICLES.map((project: any) => {
+          {ARTICLES.map((project) => {
             if (project.title === currentArticle.title) return null;
             return (
               <div key={project.title}>
