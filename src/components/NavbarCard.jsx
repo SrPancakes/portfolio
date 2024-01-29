@@ -2,7 +2,7 @@ export default function NavbarCard(props) {
 
   return (
     <a
-      onClick={onclick}
+      onClick={props.onclick}
       className="hover:cursor-pointer border-none block max-w-md py-4 border rounded-lg shadow hover:bg-gray-100  dark:hover:bg-gray-50/5"
     >
       <h5 

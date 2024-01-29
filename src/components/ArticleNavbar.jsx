@@ -1,4 +1,4 @@
-import NavbarCard from "./NavbarCard.tsx";
+import NavbarCard from "./NavbarCard.jsx";
 import ARTICLES from "../data/articles.json";
 
 import { useProjectStore } from "./store/projectStore";

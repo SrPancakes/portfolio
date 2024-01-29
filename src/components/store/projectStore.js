@@ -1,4 +1,4 @@
-import { create } from "zustand";
+import { create } from 'zustand';
 import PROJECTS from "../../data/projects.json";
 import ARTICLES from "../../data/articles.json";
 
