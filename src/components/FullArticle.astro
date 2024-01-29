@@ -1,6 +1,10 @@
 ---
-import { DynamicArticle } from './dynamicArticle.tsx'
-import Article from '../data/articles/article1.md'
+import DynamicArticle from './dynamicArticle.tsx'
+
+import LinkButton from './LinkButton.astro'
 ---
 
-<Article />
+<article class="min-h-[70vh] px-16">
+  <DynamicArticle client:visible />
+  <LinkButton href="/">View Source</LinkButton>
+</article>
