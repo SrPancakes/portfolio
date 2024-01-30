@@ -6,11 +6,5 @@ import react from "@astrojs/react";
 // https://astro.build/config
 export default defineConfig({
   integrations: [tailwind(), react()],
-  vite: {
-    build: {
-      rollupOptions: {
-        external: ['zustand']
-      }
-    }
-  }
+  output: 'server',
 });
