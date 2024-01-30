@@ -1,5 +1,16 @@
 [
   {
+    "title": "Nauga Diving - Dive as Life",
+    "description": "A web page for a diving school in the city of Coruña. The page is built with Astro and TailwindCSS.",
+    "link": "https://naugabuceo.com",
+    "image": "/projects/nauga.webp",
+    "tags": ["astro", "tailwindcss"],
+    "time": "1 month",
+    "role": "Fullstack Developer",
+    "outcome": "The project was a success and the client was very happy with the result. Being one of my first projects for a client, it was a great learning experience.",
+    "summary": ""
+  },
+  {
     "title": "PancakeVim - A modular and extensible vim configuration",
     "description": "The project is structured in a way that makes it easy to add new plugins and configurations. I'm using lazy as a plugin manager and tried to keep everything as modular as possible so adding and removing plugins would be as easy as I could make it.",
     "github": "https://github.com/SrPancakes/nvimConf",

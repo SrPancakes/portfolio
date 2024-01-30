@@ -33,12 +33,7 @@ const { title, description, image, link, github, tags } = Astro.props
       ))}
     </ul>
     <footer class="flex gap-x-4 items-end justify-start mt-4">
-      {github && (
-        <LinkButton href={github}>
-          <GitHub class="size-6" />
-          Source Code
-        </LinkButton>
-      )}
+      
       {link && (
         <LinkButton href={link}>
           <svg
@@ -65,6 +60,12 @@ const { title, description, image, link, github, tags } = Astro.props
             </>
           </svg>
           Live Demo
+        </LinkButton>
+      )}
+      {github && (
+        <LinkButton href={github}>
+          <GitHub class="size-6" />
+          Source Code
         </LinkButton>
       )}
     </footer>

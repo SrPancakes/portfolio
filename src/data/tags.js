@@ -7,8 +7,29 @@ import NodeIcon from '../components/icons/NodeIcon.astro'
 import ExpressIcon from '../components/icons/ExpressIcon.astro'
 import MongoDBIcon from '../components/icons/MongoIcon.astro'
 import MySQLIcon from '../components/icons/MysqlIcon.astro'
+import AstroIcon from '../components/icons/AstroIcon.astro'
+import NeovimIcon from '../components/icons/NvimIcon.astro'
+import LuaIcon from '../components/icons/LuaIcon.astro'
 
 export const TAGS = {
+  ASTRO: {
+    name: "Astro",
+    color: "#000000",
+    textColor: "#FFFFFF",
+    icon: AstroIcon
+  },
+  NVIM: {
+    name: "Neovim",
+    color: "#57A143",
+    textColor: "#FFFFFF",
+    icon: NeovimIcon
+  },
+  LUA: {
+    name: "Lua",
+    color: "#00007D",
+    textColor: "#FFFFFF",
+    icon: LuaIcon
+  },
   NEXT: {
     name: "Next.js",
     color: "#000000",
