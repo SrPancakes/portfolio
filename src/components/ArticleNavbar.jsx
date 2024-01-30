@@ -12,16 +12,16 @@ export default function Navbar() {
   };
 
   return (
-    <nav>
+    <nav className="w-[28rem]">
       <ul className="pl-12">
-        <h2 className="text-md font-bold tracking-widest text-gray-700 dark:text-gray-400">
+        <h2 className="text-sm font-bold tracking-widest text-gray-700 dark:text-gray-400">
           NOW VIEWING
         </h2>
         <NavbarCard
           title={currentArticle.title}
           description={currentArticle.description}
         />
-        <h2 className="mt-8 mb-4 text-md font-bold tracking-widest text-gray-700 dark:text-gray-400">
+        <h2 className="mt-8 mb-4 text-sm font-bold tracking-widest text-gray-700 dark:text-gray-400">
           UP NEXT
         </h2>
         <ul className="scrollbar-hide max-h-[48.5vh] overflow-y-scroll py-6">
