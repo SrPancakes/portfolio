@@ -10,33 +10,36 @@ import SearchIcon from './icons/SearchIcon.astro'
 const pathname = new URL(Astro.request.url).pathname
 ---
 
-<aside class="flex flex-row xl:flex-col text-gray-600 fixed xl:h-[100vh] xl:w-fit w-screen justify-center bottom-0 py-3 backdrop-blur gap-10">
-  <a href="/" class=`menu-icon size-8 ${pathname === '/' ? 'text-white' : ''}`>
+<aside 
+  class="dark:[&>a:hover]:text-white [&>a]:transition flex flex-row xl:flex-col 
+  text-gray-500 [&>a:hover]:text-blue-500 fixed xl:h-[100vh] 
+  xl:w-fit screen xl:pl-2 justify-center bottom-0 py-3 backdrop-blur gap-10">
+  <a href="/" class=`menu-icon size-8 ${pathname === '/' ? 'text-blue-500 dark:text-white' : ''}`>
     <HomeIcon />
   </a>
-  <a href="/projects" class=`menu-icon size-8 ${pathname === '/projects' ? 'text-white' : ''}`>
+  <a href="/projects" class=`menu-icon size-8 ${pathname === '/projects' ? 'text-blue-500 dark:text-white' : ''}`>
     <ProjectsIcon />
   </a>
-  <a href="/pages" class=`menu-icon size-8 ${pathname === '/pages' ? 'text-white' : ''}`>
+  <a href="/pages" class=`menu-icon size-8 ${pathname === '/pages' ? 'text-blue-500 dark:text-white' : ''}`>
     <PagesIcon />
   </a>
-  <a href="/stack" class=`menu-icon size-8 ${pathname === '/stack' ? 'text-white' : ''}`>
+  <a href="/stack" class=`menu-icon size-8 ${pathname === '/stack' ? 'text-blue-500 dark:text-white' : ''}`>
     <StackIcon />
   </a>
-  <a href="/profile" class=`menu-icon size-8 ${pathname === '/profile' ? 'text-white' : ''}`>
+  <a href="/profile" class=`menu-icon size-8 ${pathname === '/profile' ? 'text-blue-500 dark:text-white' : ''}`>
     <ProfileIcon />
   </a>
-  <a href="/contact" class=`menu-icon size-8 ${pathname === '/contact' ? 'text-white' : ''}`>
+  <a href="/contact" class=`menu-icon size-8 ${pathname === '/contact' ? 'text-blue-500 dark:text-white' : ''}`>
     <EnvelopeIcon />
   </a>
-  <a href="/search" class=`menu-icon size-8 ${pathname === '/search' ? 'text-white' : ''}`>
+  <a href="/search" class=`menu-icon size-8 ${pathname === '/search' ? 'text-blue-500 dark:text-white' : ''}`>
     <SearchIcon />
   </a>
 </aside>
 
 <style>
   .menu-icon:hover {
-    color: #fff; 
     cursor: pointer;
+    transform: scale(1.15);
   }
 </style>

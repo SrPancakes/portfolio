@@ -38,9 +38,9 @@ const API_KEY = import.meta.env.CONTACT_FORM_KEY
         <div class="mt-14 flex gap-2">
           <button 
             type="button" 
-            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
-            focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center 
-            inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
+            class="bg-gray-200/70 hover:bg-gray-300/70 dark:bg-[#24292F] dark:hover:bg-[#050708]/30 
+            focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 
+            text-center inline-flex items-center dark:focus:ring-gray-500 me-2 mb-2"
           >
             <CalendarIcon class="size-4 me-2" />
             Book a call
@@ -49,7 +49,7 @@ const API_KEY = import.meta.env.CONTACT_FORM_KEY
           <button 
             type="button" 
             onclick="navigator.clipboard.writeText('l.nunezg.dev@gmail.com')"
-            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
+            class="bg-gray-200/70 hover:bg-gray-300/70 dark:bg-[#24292F] focus:ring-4 focus:outline-none 
             focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
             items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
           >
@@ -60,7 +60,7 @@ const API_KEY = import.meta.env.CONTACT_FORM_KEY
           <a 
             href="https://twitter.com/SrPancakesDev"
             target="_blank"
-            class="text-white bg-[#24292F] hover:bg-[#24292F]/90 focus:ring-4 focus:outline-none 
+            class="bg-gray-200/70 hover:bg-gray-300/70 dark:bg-[#24292F] focus:ring-4 focus:outline-none 
             focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex 
             items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 me-2 mb-2"
           >
@@ -71,7 +71,7 @@ const API_KEY = import.meta.env.CONTACT_FORM_KEY
       </div>
 
       <p class="ml-6 py-6 flex flex-row items-center justify-center gap-10">
-        <span class="w-96 bg-white h-[1px]"></span>OR<span class="w-96 bg-white h-[1px]"></span>
+        <span class="w-96 dark:bg-white bg-gray-700 h-[1px]"></span>OR<span class="w-96 bg-gray-700 dark:bg-white h-[1px]"></span>
       </p>
 
       <form 
@@ -113,7 +113,7 @@ const API_KEY = import.meta.env.CONTACT_FORM_KEY
             Submit
           </button>
 
-          <p class="flex flex-row items-center justify-center gap-1">
+          <p class="flex flex-row items-center justify-center gap-1 text-yellow-800/90 dark:text-yellow-200/90">
             <ClockIcon class="size-4 me-2" />
             Around 1-4 hours to respond
           </p>
