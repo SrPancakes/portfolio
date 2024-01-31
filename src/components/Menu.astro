@@ -5,13 +5,14 @@ import PagesIcon from './icons/PagesIcon.astro'
 import StackIcon from './icons/StackIcon.astro'
 import ProfileIcon from './icons/ProfileIcon.astro'
 import EnvelopeIcon from './icons/EnvelopeIcon.astro'
-import SearchIcon from './icons/SearchIcon.astro'
+// import SearchIcon from './icons/SearchIcon.astro'
 
 const pathname = new URL(Astro.request.url).pathname
 ---
 
 <aside 
-  class="dark:[&>a:hover]:text-white [&>a]:transition flex flex-row xl:flex-col 
+  class="hidden xl:flex xl:flex-col
+  dark:[&>a:hover]:text-white [&>a]:transition 
   text-gray-500 [&>a:hover]:text-blue-500 fixed xl:h-[100vh] 
   xl:w-fit screen xl:pl-2 justify-center bottom-0 py-3 backdrop-blur gap-10">
   <a href="/" class=`menu-icon size-8 ${pathname === '/' ? 'text-blue-500 dark:text-white' : ''}`>
