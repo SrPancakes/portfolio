@@ -8,11 +8,11 @@
     "time": "1 month",
     "role": "Fullstack Developer",
     "outcome": "The project was a success and the client was very happy with the result. Being one of my first projects for a client, it was a great learning experience.",
-    "summary": ""
+    "summary": "The objective of the projects was to create a web page that replaced the old one. The client wanted a modern and responsive web page that would be easy to maintain and update. The main challenge of the website was transmitting that scuba diving vibes without being too overwhelming. That's the reason it's dark mode only. \n\n The selected stack for this project was Astro as framework with TS as language. The reason behind that is the client wanted a quite static page, not integrating any DB or complex functionality other than a contact form and some smooth animations. This also allowed me to aim for a very modular design, but leaving the door open for integrating some account system or eCommerce in a near future if wanted."
   },
   {
     "title": "PancakeVim - A modular and extensible vim configuration",
-    "description": "The project is structured in a way that makes it easy to add new plugins and configurations. I'm using lazy as a plugin manager and tried to keep everything as modular as possible so adding and removing plugins would be as easy as I could make it.",
+    "description": "The is structured in a way that makes it easy to add new plugins and configurations. I'm using lazy as a plugin manager and tried to keep everything as modular as possible so adding and removing plugins would be as easy as I could make it.",
     "github": "https://github.com/SrPancakes/nvimConf",
     "image": "/projects/pancakeVimNoBg.webp",
     "tags": ["lua", "vim"],
