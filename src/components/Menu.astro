@@ -1,9 +1,7 @@
 ---
 import HomeIcon from './icons/HomeIcon.astro'
 import ProjectsIcon from './icons/ProjectsIcon.astro'
-import PagesIcon from './icons/PagesIcon.astro'
 import StackIcon from './icons/StackIcon.astro'
-import ProfileIcon from './icons/ProfileIcon.astro'
 import EnvelopeIcon from './icons/EnvelopeIcon.astro'
 // import SearchIcon from './icons/SearchIcon.astro'
 
@@ -21,14 +19,8 @@ const pathname = new URL(Astro.request.url).pathname
   <a href="/projects" class=`menu-icon size-8 ${pathname === '/projects' ? 'text-blue-500 dark:text-white' : ''}`>
     <ProjectsIcon />
   </a>
-  <a href="/pages" class=`menu-icon size-8 ${pathname === '/pages' ? 'text-blue-500 dark:text-white' : ''}`>
-    <PagesIcon />
-  </a>
   <a href="/stack" class=`menu-icon size-8 ${pathname === '/stack' ? 'text-blue-500 dark:text-white' : ''}`>
     <StackIcon />
-  </a>
-  <a href="/profile" class=`menu-icon size-8 ${pathname === '/profile' ? 'text-blue-500 dark:text-white' : ''}`>
-    <ProfileIcon />
   </a>
   <a href="/contact" class=`menu-icon size-8 ${pathname === '/contact' ? 'text-blue-500 dark:text-white' : ''}`>
     <EnvelopeIcon />
