@@ -4,7 +4,7 @@ import ARTICLES from '../data/articles.json'
 const diffDays = (date: string) => {
   const today = new Date()
   const articleDate = new Date(date)
-  const diffTime = Math.abs(today.getTime() - articleDate.getTime())
+  const diffTime = today.getTime() - articleDate.getTime()
   const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
 
   return diffDays
@@ -12,13 +12,14 @@ const diffDays = (date: string) => {
 
 const isNew = (date:string) => {
   const timespan = diffDays(date)
-  return timespan <= 7
+  return timespan <= 7 && timespan >= 0
 }
 
 const commingSoon = (date:string) => {
   const timespan = diffDays(date)
-  return timespan <= 0
+  return timespan < 0
 }
+
 
 const isOld = (date:string) => {
   const timespan = diffDays(date)
@@ -34,7 +35,7 @@ const isOld = (date:string) => {
           class="flex flex-row hover:cursor-pointer hover:text-gray-700 dark:hover:text-gray-300"
           target="_blank"
           href={article.link}>
-          <h2 class="text-lg text-pretty truncate">
+          <h2 class="text-lg text-pretty truncate flex items-center justify-center gap-1.5">
             {article.title}
             <span 
               class:list={[
@@ -45,7 +46,7 @@ const isOld = (date:string) => {
                 }
               ]}
             >
-              {isNew(article.date) ? "New" : commingSoon(article.date) ? "Coming Soon" : "" }
+              {isNew(article.date) ? "New" : "Coming Soon" }
             </span>
           </h2>
           <span class="text-right min-w-28 ml-auto text-gray-400 dark:text-gray-500">

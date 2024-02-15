@@ -1,16 +1,16 @@
 [
   {
-    "title": "A Tale About Lucas",
-    "description": "This article is just my presentation to the world. I'm gonna talk about my life, my experiences and my goals. I hope you enjoy it.",
-    "date": "2024-02-15",
-    "topic": "About Me",
-    "link": "https://medium.com/@SrPancakes/a-tale-about-lucas-f36b9fd3f7c9"
-  },
-  {
     "title": "Content Tailoring - And How Netflix Engage Its Users With It",
     "description": "In this post I'm talking about how Netflix changes in real time the content that is shown to its users, and how it impacts the user experience.",
     "date": "2024-02-25",
     "topic": "Big Data",
     "link": "https://www.medium.com/@SrPancakes"
+  },
+  {
+    "title": "A Tale About Lucas",
+    "description": "This article is just my presentation to the world. i'm gonna talk about my life, my experiences and my goals. i hope you enjoy it.",
+    "date": "2024-02-15",
+    "topic": "about me",
+    "link": "https://medium.com/@srpancakes/a-tale-about-lucas-f36b9fd3f7c9"
   }
 ]
