@@ -4,6 +4,7 @@ import SpeedInsights from '@vercel/speed-insights/astro'
 import '@fontsource-variable/onest'
 
 import Menu from '../components/Menu.astro';
+import Hotkeys from '../components/Hotkeys.astro';
 import Footer from '../components/Footer.astro';
 import { ViewTransitions } from 'astro:transitions';
 
@@ -36,6 +37,7 @@ const { title, description } = Astro.props;
       <Menu />
     </aside>
 		<slot />
+    <Hotkeys />
     <Footer />
     <SpeedInsights />
 	</body>

@@ -5,12 +5,12 @@ import YouTubeIcon from './icons/YouTubeIcon.astro'
 import XIcon from './icons/XIcon.astro'
 import LinkedInIcon from './icons/LinkedInIcon.astro'
 
-import {socials} from '../data/socials.json'
+import { links } from '../data/socials.json'
 ---
 
 <div class="grid grid-cols-5 gap-8">
   {
-    socials.map(
+    links.map(
       button => (
         <a
           href={button.url}

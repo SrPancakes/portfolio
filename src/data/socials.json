@@ -1,27 +1,32 @@
 {
-  "socials": [
+  "links": [
     {
-      "name": "GitHub",
+      "network": "GitHub",
+      "username": "SrPancakes",
       "url": "https://github.com/SrPancakes",
       "icon": "GitHubIcon"
     },
     {
-      "name": "Medium",
+      "network": "Medium",
+      "username": "SrPancakes",
       "url": "https://medium.com/@SrPancakes",
       "icon": "MediumIcon"
     },
     {
-      "name": "YouTube",
+      "network": "YouTube",
+      "username": "SrPancakes",
       "url": "https://youtube.com/@SrPancakes",
       "icon": "YouTubeIcon"
     },
     {
-      "name": "GitHub",
+      "network": "X",
+      "username": "SrPancakesDev",
       "url": "https://twitter.com/SrPancakesDev",
       "icon": "XIcon"
     },
     {
-      "name": "LinkedIn",
+      "network": "LinkedIn",
+      "username": "lucasnunezg-dev",
       "url": "https://www.linkedin.com/in/lucasnunezg-dev",
       "icon": "LinkedInIcon"
     }
