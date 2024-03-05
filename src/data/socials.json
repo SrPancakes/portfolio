@@ -1,12 +1,6 @@
 {
   "links": [
     {
-      "network": "GitHub",
-      "username": "SrPancakes",
-      "url": "https://github.com/SrPancakes",
-      "icon": "GitHubIcon"
-    },
-    {
       "network": "Medium",
       "username": "SrPancakes",
       "url": "https://medium.com/@SrPancakes",
@@ -19,10 +13,16 @@
       "icon": "YouTubeIcon"
     },
     {
-      "network": "X",
-      "username": "SrPancakesDev",
-      "url": "https://twitter.com/SrPancakesDev",
-      "icon": "XIcon"
+      "network": "Instagram",
+      "username": "srpancakes.dev",
+      "url": "https://instagram.com/srpancakes.dev",
+      "icon": "InstagramIcon"
+    },
+    {
+      "network": "GitHub",
+      "username": "SrPancakes",
+      "url": "https://github.com/SrPancakes",
+      "icon": "GitHubIcon"
     },
     {
       "network": "LinkedIn",
