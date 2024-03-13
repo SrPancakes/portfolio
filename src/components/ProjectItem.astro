@@ -15,8 +15,8 @@ const { title, description, image, link, github, tags } = Astro.props
 ---
 
 <article class="md:scale-90 xl:hover:scale-105 transition flex items-center flex-col xl:flex-row gap-x-20">
-  <div class="py-10">
-    <h3 class="text-xl md:text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
+  <div class="py-2 sm:py-10 w-4/5 sm:w-auto">
+    <h3 class="text-lg sm:text-xl md:text-2xl font-semibold text-yellow-800 dark:text-yellow-200 mb-2">
       {title}
     </h3>
     <p class="text-md md:text-lg mb-4 text-pretty">
@@ -73,7 +73,7 @@ const { title, description, image, link, github, tags } = Astro.props
   
   <img
     loading="lazy"
-    class="rounded-lg shadow-2xl shadow-white/10 aspect-video xl:w-1/2"
+    class="rounded-lg shadow-2xl shadow-white/10 aspect-video w-4/5 xl:w-1/2"
     src={image}
     alt={`Screenshot of ${title}`}
   />

@@ -1,6 +1,5 @@
 ---
 import HomeIcon from './icons/HomeIcon.astro'
-import ProjectsIcon from './icons/ProjectsIcon.astro'
 import StackIcon from './icons/StackIcon.astro'
 import EnvelopeIcon from './icons/EnvelopeIcon.astro'
 import SearchIcon from './icons/SearchIcon.astro'
@@ -15,9 +14,6 @@ const pathname = new URL(Astro.request.url).pathname
   xl:w-fit screen xl:pl-2 justify-center bottom-0 py-3 backdrop-blur gap-10">
   <a href="/" class=`menu-icon size-8 ${pathname === '/' ? 'text-blue-500 dark:text-white' : ''}`>
     <HomeIcon />
-  </a>
-  <a href="/projects" class=`menu-icon size-8 ${pathname === '/projects' ? 'text-blue-500 dark:text-white' : ''}`>
-    <ProjectsIcon />
   </a>
   <a href="/stack" class=`menu-icon size-8 ${pathname === '/stack' ? 'text-blue-500 dark:text-white' : ''}`>
     <StackIcon />
