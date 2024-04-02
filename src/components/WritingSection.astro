@@ -12,7 +12,7 @@ const diffDays = (date: string) => {
 
 const isNew = (date:string) => {
   const timespan = diffDays(date)
-  return timespan <= 7 && timespan >= 0
+  return timespan <= 15 && timespan >= 0
 }
 
 const commingSoon = (date:string) => {
@@ -23,7 +23,7 @@ const commingSoon = (date:string) => {
 
 const isOld = (date:string) => {
   const timespan = diffDays(date)
-  return timespan > 7
+  return timespan > 15
 }
 ---
 
